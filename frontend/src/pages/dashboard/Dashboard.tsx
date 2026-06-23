@@ -35,7 +35,7 @@ export default function Dashboard() {
 
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/projects", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects`, {
           headers: { Authorization: `Bearer ${token}` }
         })
         setProjects(response.data)
@@ -52,7 +52,7 @@ export default function Dashboard() {
   const handleCreateProject = async () => {
     const token = localStorage.getItem("token")
     try {
-      const response = await axios.post("http://localhost:5000/api/projects", { title: "New Project" }, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects`, { title: "New Project" }, {
         headers: { Authorization: `Bearer ${token}` }
       })
       navigate(`/builder/${response.data._id}`)
@@ -65,7 +65,7 @@ export default function Dashboard() {
     if (!window.confirm("Are you sure you want to delete this project?")) return
     const token = localStorage.getItem("token")
     try {
-      await axios.delete(`http://localhost:5000/api/projects/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setProjects(projects.filter(p => p._id !== id))

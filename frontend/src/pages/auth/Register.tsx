@@ -37,7 +37,7 @@ export default function Register() {
     setIsLoading(true)
     setError("")
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/auth/register`, {
         name: data.name,
         email: data.email,
         password: data.password

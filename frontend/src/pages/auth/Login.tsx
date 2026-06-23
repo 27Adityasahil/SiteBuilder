@@ -32,7 +32,7 @@ export default function Login() {
     setIsLoading(true)
     setError("")
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", data)
+      const response = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/auth/login`, data)
       localStorage.setItem("token", response.data.token)
       localStorage.setItem("user", JSON.stringify(response.data))
       const from = location.state?.from || "/dashboard"

@@ -31,7 +31,7 @@ export default function Assets() {
 
   const fetchAssets = async (token: string) => {
     try {
-      const response = await axios.get("http://localhost:5000/api/assets", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/assets`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setAssets(response.data)
@@ -52,7 +52,7 @@ export default function Assets() {
 
     const token = localStorage.getItem("token")
     try {
-      await axios.post("http://localhost:5000/api/assets", formData, {
+      await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/assets`, formData, {
         headers: { 
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data" 
@@ -72,7 +72,7 @@ export default function Assets() {
     if (!window.confirm("Delete this asset permanently?")) return
     const token = localStorage.getItem("token")
     try {
-      await axios.delete(`http://localhost:5000/api/assets/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/assets/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setAssets(assets.filter(a => a._id !== id))

@@ -21,7 +21,7 @@ export const TemplatesSection = () => {
     setLoadingTemplateId(template.id);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/projects",
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects`,
         { 
           title: template.name,
           pages: template.pages,

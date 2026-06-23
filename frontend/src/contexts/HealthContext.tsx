@@ -16,7 +16,7 @@ export const BuilderHealthProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const checkHealth = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/health?t=${Date.now()}`, { timeout: 3000 });
+      const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/health?t=${Date.now()}`, { timeout: 3000 });
       if (response.data.status === 'online') {
         setStatus('online');
       } else {

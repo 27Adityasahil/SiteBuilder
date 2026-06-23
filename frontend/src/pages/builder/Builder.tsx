@@ -40,7 +40,7 @@ export default function Builder() {
 
     const fetchProject = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/projects/${id}`, {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         })
         setProject(response.data)
@@ -75,7 +75,7 @@ export default function Builder() {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/projects/${id}`, { pages, defaultPageId: currentPageId }, {
+      await axios.put(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${id}`, { pages, defaultPageId: currentPageId }, {
         headers: { Authorization: `Bearer ${token}` }
       })
       alert("Project saved!")
