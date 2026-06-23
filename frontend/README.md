@@ -1,4 +1,4 @@
-# 🚀 SiteBuilder Frontend
+# SiteBuilder Frontend
 
 Frontend application for SiteBuilder Visual Development Platform.
 

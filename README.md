@@ -1,4 +1,4 @@
-# 🚀 SiteBuilder - Visual Development Platform
+# SiteBuilder - Visual Development Platform
 
 SiteBuilder is a full-stack visual website creation platform that enables users to design responsive websites using drag-and-drop components and generate production-ready code.
 
@@ -8,10 +8,10 @@ Unlike traditional website builders, SiteBuilder internally manages websites as 
 
 ---
 
-# ✨ Features
+# Features
 
 
-## 🎨 Visual Website Builder
+## Visual Website Builder
 
 - Drag and drop editor
 - Real-time canvas rendering
@@ -26,7 +26,7 @@ Unlike traditional website builders, SiteBuilder internally manages websites as 
 
 ---
 
-## 🧩 Component System
+## Component System
 
 Available components:
 
@@ -70,7 +70,7 @@ Available components:
 
 ---
 
-# 🎛️ Style Customization
+# Style Customization
 
 Modify every component property:
 
@@ -88,7 +88,7 @@ Modify every component property:
 
 ---
 
-# 🌳 Component Tree Engine
+# Component Tree Engine
 
 Each website is stored as structured JSON.
 
@@ -122,7 +122,7 @@ This allows:
 
 ---
 
-# 💻 Code Generation Engine
+# Code Generation Engine
 
 Convert visual designs into:
 
@@ -142,7 +142,7 @@ Features:
 
 ---
 
-# 📱 Responsive Builder
+# Responsive Builder
 
 
 Preview modes:
@@ -154,7 +154,7 @@ Preview modes:
 
 ---
 
-# 👤 User Features
+# User Features
 
 - Register/Login
 - Create projects
@@ -166,7 +166,7 @@ Preview modes:
 
 ---
 
-# 🏗️ Architecture
+# Architecture
 
 
 User
@@ -199,7 +199,7 @@ Code Generator
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 
 Frontend:

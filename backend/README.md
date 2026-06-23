@@ -1,4 +1,4 @@
-# 🚀 SiteBuilder Backend API
+# SiteBuilder Backend API
 
 Backend service powering SiteBuilder website creation platform.
 
